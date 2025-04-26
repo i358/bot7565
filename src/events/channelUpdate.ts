@@ -14,8 +14,8 @@ export default {
                 guild: newChannel.guild,
                 action: 'channelUpdate',
                 target: newChannel,
-                oldValue: oldName,
-                newValue: newName,
+                oldValue: oldName ?? undefined,
+                newValue: newName ?? undefined,
                 moderator: null
             });
         } catch (err) {

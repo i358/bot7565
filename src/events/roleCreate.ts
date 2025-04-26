@@ -2,7 +2,7 @@ import { Events, Role, Client } from 'discord.js';
 import { logModeration } from '../utils/logModeration';
 
 export default {
-    name: Events.RoleCreate,
+    name: 'roleCreate',
     once: false,
     async execute(role: Role, client: Client) {
         try {

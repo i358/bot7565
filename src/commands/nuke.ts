@@ -51,7 +51,7 @@ const command: Command = {
                 const newChannel = await interaction.guild?.channels.create({
                     name: channelInfo.name,
                     type: ChannelType.GuildText,
-                    topic: channelInfo.topic,
+                    topic: channelInfo.topic ?? undefined,
                     nsfw: channelInfo.nsfw,
                     rateLimitPerUser: channelInfo.rateLimitPerUser,
                     parent: channelInfo.parent,

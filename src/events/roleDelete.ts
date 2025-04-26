@@ -2,7 +2,7 @@ import { Events, Role, Client } from 'discord.js';
 import { logModeration } from '../utils/logModeration';
 
 export default {
-    name: Events.RoleDelete,
+    name: 'roleDelete',
     once: false,
     async execute(role: Role, client: Client) {
         try {

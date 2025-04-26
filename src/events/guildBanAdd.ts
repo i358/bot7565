@@ -12,7 +12,7 @@ export default {
             const banLog = fetchedLogs.entries.first();
             let moderator = null;
             let reason = undefined;
-            if (banLog && banLog.target.id === user.id) {
+            if (banLog && banLog.target && banLog.target.id === user.id) {
                 moderator = banLog.executor;
                 reason = banLog.reason || undefined;
             }

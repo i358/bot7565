@@ -13,7 +13,7 @@ export default {
                 const timeoutLog = fetchedLogs.entries.first();
                 let moderator = null;
                 let reason = undefined;
-                if (timeoutLog && timeoutLog.target.id === newMember.id) {
+                if (timeoutLog && timeoutLog.target && timeoutLog.target.id === newMember.id) {
                     moderator = timeoutLog.executor;
                     reason = timeoutLog.reason || undefined;
                 }

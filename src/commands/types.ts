@@ -1,11 +1,11 @@
 import { 
     ChatInputCommandInteraction, 
     SlashCommandBuilder, 
-    SlashCommandSubcommandsOnlyBuilder
+    SlashCommandOptionsOnlyBuilder
 } from 'discord.js';
 
 export interface Command {
-    data: Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">;
+    data: SlashCommandBuilder | SlashCommandOptionsOnlyBuilder;
     execute: (interaction: ChatInputCommandInteraction) => Promise<void>;
     cooldown?: number; // Komut kullanım sınırı (saniye)
 }
