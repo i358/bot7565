@@ -196,7 +196,7 @@ async function init() {
         console.log('Commands registered to Discord');
         
         // HTTP sunucusunu başlat
-        createServer(client);
+        createServer(client, PORT);
         
         // Ses kanalına bağlan
         await connectToVoiceChannel(client);
